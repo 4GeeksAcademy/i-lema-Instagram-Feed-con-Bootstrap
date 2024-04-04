@@ -5,3 +5,11 @@
     align-content: center;
     font-family: "Roboto", sans-serif;
 }
+/* .img-cover{
+    object-fit:scale-down;
+    overflow: hidden;
+    display: flex;
+    flex-grow: 1;
+    margin: auto;
+    justify-content: center;
+} */
