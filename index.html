@@ -10,32 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand fs-3" href="#">
+            <!-- Icono y nombre Instagram -->
+            <a class="navbar-brand fs-3 ms-0 ms-sm-5" href="#">
                 <i class="fa-brands fa-instagram fa-brands fa-instagram fs-3" alt="logo"></i>
-                        Instagram 
+                <div class="d-none d-sm-inline-block">
+                    Instagram
+                </div>
+                 
             </a>
-            <div class="ms-auto me-5 d-flex">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="ms-auto me-0 me-sm-5 d-flex">
+                <!-- Botón Create new post (vista para tamaño superior a sm) -->
+                <button type="button" class="btn btn-success d-none d-sm-flex" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Create a new post
+                </button>
+                <!-- Botón New post (vista para tamaño xs) -->
+                <button type="button" class="btn btn-success d-flex d-sm-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    New post
                 </button>
                 <!-- Modal -->
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                                <h1 class="modal-title fs-5 fw-semibold" id="staticBackdropLabel">Create a new post</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <form>
-                                    <div class="mb-3">
-                                        <label for="message-text" class="col-form-label">Caption:</label>
-                                        <textarea class="form-control" id="message-text">Add the caption of your post here</textarea>
-                                        <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
-                                        <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+                                    <div class="mb-2">
+                                        <label for="message-text" class="col-form-label fw-semibold">Caption:</label>
+                                        <textarea class="form-control mb-3 text-secondary" id="message-text">Add the caption of your post here</textarea>
+                                        <button type="button" class="btn btn-light border-secondary-subtle me-1"><i class="fa-solid fa-camera"></i></button>
+                                        <button type="button" class="btn btn-light border-secondary-subtle"><i class="fa-solid fa-location-dot"></i></button>
                                     </div>
                                 </form> 
                             </div>
@@ -46,8 +55,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="dropdown ms-5">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <!-- Botón de opciones -->
+                <div class="dropdown ms-1 ms-sm-5">
+                    <button class="btn btn-secondary dropdown-toggle me-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-gear"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -61,134 +71,136 @@
             </div>
         </div>
     </nav>
-    <div class="container d-flex justify-content-center py-2">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active border-0 bg-body p-2" aria-current="true" aria-label="Slide 1"><i class="fa-solid fa-table-cells"></i></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="border-0 bg-body p-2" aria-label="Slide 2"><i class="fa-solid fa-square"></i></button>
-    </div>
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container-fluid text-center px-2">
-                    <div class="row row-cols-3 px-1 mb-1">
-                        <img class="mb-1 px-1" src="https://images.ecestaticos.com/kQilGq53oBc7IFLigmq1tf0Is6M=/0x0:1920x1440/557x418/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fed1%2F8a0%2F01d%2Fed18a001d81d688a53ad8081baf1f422.jpg" alt="Perro">
-                        <img class="mb-1 px-1" src="https://fotografias.lasexta.com/clipping/cmsimages01/2023/10/02/E7633736-8F43-46EF-AB0E-169330813188/amigos_98.jpg?crop=1254,706,x0,y65&width=1900&height=1069&optimize=high&format=webply" alt="Amigos">                    
-                        <img class="mb-1 px-1" src="https://www.cronista.com/files/image/297/297779/5ffe0cbf002d2.jpg" alt="Dubrovnik">                    
-                        <img class="my-1 px-1" src="https://plus.unsplash.com/premium_photo-1679865370855-5a367b828f9a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Felicidad">                    
-                        <img class="my-1 px-1" src="https://phantom-elmundo.unidadeditorial.es/89f06d4e53f097cf025bdf7470ed128e/resize/473/f/webp/assets/multimedia/imagenes/2023/03/30/16801663970469.jpg" alt="Torre Eiffel">                    
-                        <img class="my-1 px-1" src="https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/11/24/3496430-71275768-2560-1440.jpg" alt="Goal">                    
-                        <img class="my-1 px-1" src="https://blog.alanniaresorts.com/wp-content/uploads/family-17.jpg" alt="Family">                    
-                        <img class="my-1 px-1" src="https://www.iamthecode.org/wp-content/uploads/2021/03/florian-olivo-4hbJ-eymZ1o-unsplash-scaled-e1616631053918.jpg" alt="Code">                    
-                        <img class="my-1 px-1" src="https://res-2.cloudinary.com/the-university-of-melbourne/image/upload/s---ekqKgj_--/c_limit,f_auto,q_75,w_892/v1/pursuit-uploads/4d0/fbc/b7f/4d0fbcb7f6966e83dd56cf6853acb375bed06f535f59de58b97fd7275989.jpg" alt="Students">
-                    </div>
+    <!-- Botones cambio de vista -->
+    <ul class="nav nav-tabs justify-content-center mt-2 mb-1" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><div class="container-fluid text-center px-2">
+            <!-- Configuración e imágenes vista múltiple -->
+            <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-xs-1 px-1 mb-1">
+                <img class="mb-1 px-1" src="https://images.ecestaticos.com/kQilGq53oBc7IFLigmq1tf0Is6M=/0x0:1920x1440/557x418/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fed1%2F8a0%2F01d%2Fed18a001d81d688a53ad8081baf1f422.jpg" alt="Perro">
+                <img class="mb-1 px-1" src="https://fotografias.lasexta.com/clipping/cmsimages01/2023/10/02/E7633736-8F43-46EF-AB0E-169330813188/amigos_98.jpg?crop=1254,706,x0,y65&width=1900&height=1069&optimize=high&format=webply" alt="Amigos">                    
+                <img class="mb-1 px-1" src="https://www.cronista.com/files/image/297/297779/5ffe0cbf002d2.jpg" alt="Dubrovnik">                    
+                <img class="my-1 px-1" src="https://plus.unsplash.com/premium_photo-1679865370855-5a367b828f9a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Felicidad">                    
+                <img class="my-1 px-1" src="https://phantom-elmundo.unidadeditorial.es/89f06d4e53f097cf025bdf7470ed128e/resize/473/f/webp/assets/multimedia/imagenes/2023/03/30/16801663970469.jpg" alt="Torre Eiffel">                    
+                <img class="my-1 px-1" src="https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/11/24/3496430-71275768-2560-1440.jpg" alt="Goal">                    
+                <img class="my-1 px-1" src="https://blog.alanniaresorts.com/wp-content/uploads/family-17.jpg" alt="Family">                    
+                <img class="my-1 px-1" src="https://www.iamthecode.org/wp-content/uploads/2021/03/florian-olivo-4hbJ-eymZ1o-unsplash-scaled-e1616631053918.jpg" alt="Code">                    
+                <img class="my-1 px-1" src="https://res-2.cloudinary.com/the-university-of-melbourne/image/upload/s---ekqKgj_--/c_limit,f_auto,q_75,w_892/v1/pursuit-uploads/4d0/fbc/b7f/4d0fbcb7f6966e83dd56cf6853acb375bed06f535f59de58b97fd7275989.jpg" alt="Students">
+            </div>
+        </div></div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <!-- Configuración e imágenes vista posts -->
+            <div class="row row-cols-1 justify-content-center px-sm-0 px-3">
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>My Crazy dog Spark</h2>
+                    <h5>08/26</h5>
+                </div>
+                <img src="https://images.ecestaticos.com/kQilGq53oBc7IFLigmq1tf0Is6M=/0x0:1920x1440/557x418/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fed1%2F8a0%2F01d%2Fed18a001d81d688a53ad8081baf1f422.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>204 Likes</strong></h6>
+                    <p>This is an example of a very good photo that you can post on instagram.</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="container text-center align-items-center">
-                    <div class="row row-cols-1 justify-content-center">
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>My Crazy dog Spark</h2>
-                                <h5>08/26</h5>
-                            </div>
-                            <img src="https://images.ecestaticos.com/kQilGq53oBc7IFLigmq1tf0Is6M=/0x0:1920x1440/557x418/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fed1%2F8a0%2F01d%2Fed18a001d81d688a53ad8081baf1f422.jpg" class="card-img-top" alt="...">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>204 Likes</strong></h6>
-                                <p>This is an example of a very good photo that you can post on instagram.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Friends!!</h2>
-                                <h5>08/27</h5>
-                            </div>
-                            <img src="https://fotografias.lasexta.com/clipping/cmsimages01/2023/10/02/E7633736-8F43-46EF-AB0E-169330813188/amigos_98.jpg?crop=1254,706,x0,y65&width=1900&height=1069&optimize=high&format=webply" class="card-img-top" alt="..">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>505 Likes</strong></h6>
-                                <p>Enyoing life alongside very good friends. Thak you, hope we can meet soon again.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Paradise!</h2>
-                                <h5>07/23</h5>
-                            </div>
-                            <img src="https://www.cronista.com/files/image/297/297779/5ffe0cbf002d2.jpg" class="card-img-top" alt="Dubrovnik">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>26985 Likes</strong></h6>
-                                <p>This is an example of a very good photo that you can post on Instagram.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Big smile</h2>
-                                <h5>06/22</h5>
-                            </div>
-                            <img src="https://plus.unsplash.com/premium_photo-1679865370855-5a367b828f9a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Felicidad">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>1200 Likes</strong></h6>
-                                <p>Good weather, big smile, sun always brings happiness.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Amazing city Paris</h2>
-                                <h5>10/15</h5>
-                            </div>
-                            <img src="https://phantom-elmundo.unidadeditorial.es/89f06d4e53f097cf025bdf7470ed128e/resize/473/f/webp/assets/multimedia/imagenes/2023/03/30/16801663970469.jpg" class="card-img-top" alt="Torre Eiffel">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>905 Likes</strong></h6>
-                                <p>Sunny day in Paris, awesome Eiffel tower beside the river.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Amazing goal</h2>
-                                <h5>11/24</h5>
-                            </div>
-                            <img src="https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/11/24/3496430-71275768-2560-1440.jpg" class="card-img-top" alt="Goal">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>9200 Likes</strong></h6>
-                                <p>Richarlison notched a gorgeous goal on a miraculous scissor kick.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Happy Family</h2>
-                                <h5>09/05</h5>
-                            </div>
-                            <img src="https://blog.alanniaresorts.com/wp-content/uploads/family-17.jpg" class="card-img-top" alt="Family">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>5204 Likes</strong></h6>
-                                <p>Family enyoing time together.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Code</h2>
-                                <h5>18/06</h5>
-                            </div>
-                            <img src="https://www.iamthecode.org/wp-content/uploads/2021/03/florian-olivo-4hbJ-eymZ1o-unsplash-scaled-e1616631053918.jpg" class="card-img-top" alt="code">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>9999 Likes</strong></h6>
-                                <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card col-7 mt-3 mb-3 py-2 px-0">
-                            <div class="d-flex justify-content-between align-items-center px-2">
-                                <h2>Always learning</h2>
-                                <h5>15/02</h5>
-                            </div>
-                            <img src="https://res-2.cloudinary.com/the-university-of-melbourne/image/upload/s---ekqKgj_--/c_limit,f_auto,q_75,w_892/v1/pursuit-uploads/4d0/fbc/b7f/4d0fbcb7f6966e83dd56cf6853acb375bed06f535f59de58b97fd7275989.jpg" class="card-img-top" alt="Students">
-                            <div class="card-body d-flex flex-column align-items-start">
-                                <h6><strong>11204 Likes</strong></h6>
-                                <p>Always keep learning. Time at class, each day getting better.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Friends!!</h2>
+                    <h5>08/27</h5>
+                </div>
+                <img src="https://fotografias.lasexta.com/clipping/cmsimages01/2023/10/02/E7633736-8F43-46EF-AB0E-169330813188/amigos_98.jpg?crop=1254,706,x0,y65&width=1900&height=1069&optimize=high&format=webply" class="card-img-top" alt="..">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>505 Likes</strong></h6>
+                    <p>Enyoing life alongside very good friends. Thak you, hope we can meet soon again.</p>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Paradise!</h2>
+                    <h5>07/23</h5>
+                </div>
+                <img src="https://www.cronista.com/files/image/297/297779/5ffe0cbf002d2.jpg" class="card-img-top" alt="Dubrovnik">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>26985 Likes</strong></h6>
+                    <p>This is an example of a very good photo that you can post on Instagram.</p>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Big smile</h2>
+                    <h5>06/22</h5>
+                </div>
+                <img src="https://plus.unsplash.com/premium_photo-1679865370855-5a367b828f9a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Felicidad">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>1200 Likes</strong></h6>
+                    <p>Good weather, big smile, sun always brings happiness.</p>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Amazing city Paris</h2>
+                    <h5>10/15</h5>
+                </div>
+                <img src="https://phantom-elmundo.unidadeditorial.es/89f06d4e53f097cf025bdf7470ed128e/resize/473/f/webp/assets/multimedia/imagenes/2023/03/30/16801663970469.jpg" class="card-img-top" alt="Torre Eiffel">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>905 Likes</strong></h6>
+                    <p>Sunny day in Paris, awesome Eiffel tower beside the river.</p>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Amazing goal</h2>
+                    <h5>11/24</h5>
+                </div>
+                <img src="https://imgresizer.eurosport.com/unsafe/2560x1440/filters:format(jpeg)/origin-imgresizer.eurosport.com/2022/11/24/3496430-71275768-2560-1440.jpg" class="card-img-top" alt="Goal">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>9200 Likes</strong></h6>
+                    <p>Richarlison notched a gorgeous goal on a miraculous scissor kick.</p>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Happy Family</h2>
+                    <h5>09/05</h5>
+                </div>
+                <img src="https://blog.alanniaresorts.com/wp-content/uploads/family-17.jpg" class="card-img-top" alt="Family">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>5204 Likes</strong></h6>
+                    <p>Family enyoing time together.</p>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Code</h2>
+                    <h5>18/06</h5>
+                </div>
+                <img src="https://www.iamthecode.org/wp-content/uploads/2021/03/florian-olivo-4hbJ-eymZ1o-unsplash-scaled-e1616631053918.jpg" class="card-img-top" alt="code">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>9999 Likes</strong></h6>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card col-xs-12 col-sm-11 col-md-9 col-lg-7 mt-3 mb-3 py-2 px-0">
+                <div class="d-flex justify-content-between align-items-center px-2">
+                    <h2>Always learning</h2>
+                    <h5>15/02</h5>
+                </div>
+                <img src="https://res-2.cloudinary.com/the-university-of-melbourne/image/upload/s---ekqKgj_--/c_limit,f_auto,q_75,w_892/v1/pursuit-uploads/4d0/fbc/b7f/4d0fbcb7f6966e83dd56cf6853acb375bed06f535f59de58b97fd7275989.jpg" class="card-img-top" alt="Students">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <h6><strong>11204 Likes</strong></h6>
+                    <p>Always keep learning. Time at class, each day getting better.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </div>
+      <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
